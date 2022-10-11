@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;900&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+
+:root{
+    font-size: 10px;
+    --primary-color: #22254b;
+    --seconday-color: #373b69;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+}
+
+header{
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--seconday-color);
+}
+
+.search{
+    background-color: transparent;
+    border: .2rem solid var(--primary-color);
+    border-radius: 4.5rem;
+    font-family: inherit;
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+    color: #fff;
+}
+
+.search::placeholder{
+    color: #7378c5;
+}
+
+.search:focus{
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 30rem;
+    margin: 1.5rem;
+    background-color: var(--seconday-color);
+    box-shadow:0 .7rem .7rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    display: flex;
+    color: #fff;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: .05rem;
+}
+
+.movie-info h3{
+    font-weight: 500;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: .6rem;
+    font-weight: 500;
+}
+
+.movie-info span.green{
+    color: lightgreen;
+}
+
+.movie-info span.orange{
+    color: lightsalmon;
+}
+
+.movie-info span.red{
+    color: lightcoral;
+}
+
+.overview{
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: .7s transform;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
